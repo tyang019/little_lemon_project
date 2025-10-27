@@ -1,0 +1,128 @@
+.logo{
+  display: block;
+  height: 10rem;
+}
+body{
+  background-color: rgb(235, 235, 155);
+}
+button{
+  background-color: white;
+  cursor: pointer;
+}
+input, button{
+  font-size: 1rem;
+  font-family: Bell MT;
+  border-radius: 1rem;
+  padding: 0.4rem;
+  margin-top: 1rem;
+  margin-left: 0.5rem;
+}
+nav ul{
+  text-align: end;
+  list-style: none;
+}
+header{
+  background-color:  rgb(40, 45, 48);
+  padding: 1rem;
+}
+.search_bar{
+  
+  width: 20rem;
+}
+.banner_class{
+  color:  rgb(73, 94, 87);
+  font-weight: bolder;
+  font-size: 3rem;
+}
+nav li{
+  display: inline-block;
+  margin-left: 3rem;
+  background-color:rgb(40, 45, 48);
+  border-radius: 2rem;
+  width: 7rem;
+  cursor: pointer;
+  text-align: center;
+}
+nav li:hover{
+  background-color: rgb(240, 150, 70);
+  transition: 500ms;
+}
+a{
+  color: white;
+  text-decoration: none;
+  font-size:large;
+  font-weight: bold;
+}
+article p{
+  font-size: 1.5rem;
+  font-weight:bolder;
+  color:rgb(73, 94, 87) ;
+}
+div img{
+  height: 15rem;
+}
+.book_table{
+  height: 25rem;
+  width: 77%;
+}
+.long{
+  height: 25rem;
+}
+header > img{
+  display: block;
+}
+h1{
+  font-size: 3rem;
+}
+h2{
+  background-color:rgb(40, 45, 48);
+  border-radius: 2rem;
+  padding: 0.3rem;
+  color: white;
+  width: 100%;
+}
+h2:hover{
+  background-color:rgb(240, 150, 70);
+  border-radius: 2rem;
+  transition: 500ms;
+  border: none;
+  color: white;
+  padding: 1rem;
+}
+.footer_logo{
+  height: 7rem;
+  align-items: start;
+}
+section {
+  display: flex;
+}
+article{
+  border-radius: 1rem;
+}
+article h2{
+  cursor: pointer;
+}
+section article{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  color: rgb(73, 94, 87) ;
+  text-align: center;
+}
+footer{
+  display: flex;
+  color: white;
+  background-color: rgb(40, 45, 48);
+  padding: 1rem;
+}
+footer div{
+  flex: 1;
+}
+hr{
+  width: 50%;
+  padding-left: 5rem;
+  margin-right: 0;
+}
+.copyright{
+  text-align: end;
+}
