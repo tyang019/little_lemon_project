@@ -8,8 +8,7 @@ const submitBtn = document.getElementById('submitBtn');
 //2. Add Event Listener
 submitBtn.addEventListener('click', function(){
   overlay.style.display = 'none';
-})
-
+}) 
 searchButton.addEventListener('click', ()=> {
   const submitting = input.value.trim();
   if(submitting === ""){
@@ -19,10 +18,26 @@ searchButton.addEventListener('click', ()=> {
   }
 });
 
-  searchButton.addEventListener('enter', ()=>{
-    const entering = input.ent();
-    if(entering === 'enter'){
-      searchButton = InputEvent();
-    }
-  }
-  );
+//Create Menu
+ const menuItems = [
+  { name: "Banana Ice Cream", price: 23.99 },
+  { name: "Strawberry Gelato", price: 19.99 },
+  { name: "Greek Yogurt Delight", price: 17.49 },
+];
+
+const section = document.getElementById('section_menu');
+menuItems.forEach(item => {
+  const article = document.createElement('article');
+  article.innerHTML = `
+  <div>
+    <h3>${item.name}</h3>
+    <p>$${item.price}</p>
+    <button>Add to cart</button>
+    </div>
+    <div>
+    <h3>${item.name}</h3>
+    <p>$${item.price}</p>
+    <button>Add to cart</button>
+    </div>`;
+    section.appendChild(article);
+})

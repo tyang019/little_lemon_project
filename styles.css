@@ -6,8 +6,19 @@ body{
   background-color: rgb(235, 235, 155);
 }
 button{
-  background-color: white;
+  display: inline-block;
+  margin-left: 3rem;
+  background-color:rgb(40, 45, 48);
+  border-radius: 2rem;
+  width: 7rem;
   cursor: pointer;
+  text-align: center;
+  color: white;
+}
+button:hover{
+  background-color: rgb(240, 150, 70);
+  transition: 500ms;
+  box-shadow: 1px 2px 7px black;
 }
 input, button{
   font-size: 1rem;
@@ -63,18 +74,15 @@ header{
   box-shadow: 0 4px 10px rgba(0,0,0,0.3);
   text-align: center;
 }
-
 #message p {
   font-size: 18px;
   margin-bottom: 20px;
 }
-
 #message button {
   padding: 8px 15px;
   font-size: 16px;
   cursor: pointer;
 }
-
 .banner_class{
   color:  rgb(73, 94, 87);
   font-weight: bolder;
@@ -83,16 +91,12 @@ header{
 nav li{
   display: inline-block;
   margin-left: 3rem;
-  background-color:rgb(40, 45, 48);
   border-radius: 2rem;
   width: 7rem;
-  cursor: pointer;
   text-align: center;
 }
 nav li:hover{
-  background-color: rgb(240, 150, 70);
   transition: 500ms;
-  box-shadow: 1px 2px 7px black;
 }
 a{
   color: white;
