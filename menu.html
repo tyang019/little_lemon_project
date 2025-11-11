@@ -38,11 +38,34 @@
         <li><a href="order.html"><button>Order</button></a></li>
       </ul>
     </nav>
+      <section id="section_example">
+        <article>
+          <h1>A Place for Every Taste</h1>
+        </article>
+     </section>
+    <main class="menu_items" id="menu-page">
+        <script src="script.js"></script>
+        <script>
+         const menuContainer = document.getElementById("menu-page");
 
-    <main>
-      <section id="section_menu">
-      </section>
+          menuItems2.forEach(item => {
+            const card = document.createElement("section");
+            card.innerHTML = `
+            <section class="sectionPosition">
+              <article class="menuText">
+                <h1>${item.category}</h1>
+                <h3><img class="imgResize" src="${item.img}"</h3>
+                <p><strong>${item.name} - $${item.price}</strong></p>
+                <p><strong>${item.name1} - $${item.price1}</strong></p>
+                <p><strong>${item.name2} - $${item.price2}</strong></p>
+              </article>
+            </section>
+            `;
+            menuContainer.appendChild(card);
+          });
+        </script>
     </main>
+    
        <footer>
       <div>
         <img class="footer_logo" src="logo/Asset 20@4x.png" >
