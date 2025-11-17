@@ -9,9 +9,9 @@
     <!-- Link font styles -->
       <link rel="preconnect" href="https://fonts.googleapis.com">
       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@300;500&display=swap" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@300;500&display=swap" rel="stylesheet">
     <!-- title -->
-      <title>Little Lemon Wareshop</title>
+      <title>Little Lemon - Menu</title>
     <!-- Link your CSS files -->
       <link rel="stylesheet" href="styles.css">
       <script src="script.js" defer></script>
@@ -27,15 +27,12 @@
            <input id="input" class="search_bar" placeholder="Search" type="text"><button class="search-button">Search</button>
         </div> 
     </header>
-
     <div id="overlay" style="display: none;">
       <div id="message">
         <p>Please search for an item.</p>
         <button id="submitBtn">Ok</button>
       </div>
     </div>
-    
-
     <nav>
       <ul>
         <li><a href="index.html"><button>Home</button></a></li>
@@ -44,40 +41,3 @@
         <li><a href="order.html"><button>Order</button></a></li>
       </ul>
     </nav>
-    <main>
-       <script src="script.js"></script>
-       <section id="section_menu">
-      </section>
-      <script>
-        const section = document.getElementById('section_menu');
-
-        menuItems.forEach(item => {
-          const article = document.createElement('article');
-          article.innerHTML = 
-          `<div class="bc_menu">
-          <h3>${item.name}</h3>
-            <img src="${item.image}" class="menu-image">
-            <p class="menu_description">${item.paragraph}</p>
-            <button class="menuBtn">Add to cart</button>
-            </div>
-            `;
-            const button = article.querySelector(".menuBtn");
-        button.addEventListener("click", () => {
-          alert(`Added ${item.name} to cart`);
-        })
-        section.appendChild(article);
-        });
-      </script>
-    </main>
-
-       <footer>
-          <div>
-            <img class="footer_logo" src="logo/Asset 20@4x.png" >
-          </div>
-          <div>
-            <hr>
-            <p class="copyright">@LittleLemon Copyright</p>
-          </div>
-    </footer>
-  </body>
-</html>
