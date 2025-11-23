@@ -11,6 +11,28 @@ body{
   cursor: pointer;
   display: flex;
   align-items: end;
+  color: white;
+}
+.cart-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+.cart-item {
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  background: #fff;
+  text-align: center;
+}
+
+.cart-image {
+  width: 150px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 10px;
 }
 button{
   display: inline-block;

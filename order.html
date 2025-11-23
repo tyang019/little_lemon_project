@@ -20,7 +20,7 @@
   <body>
     <header>  
        <div class="trolley">
-         <a href="cart.html"><img class="trolley" src="logo/shopping-cart.png"></a>
+         <a href="cart.html"><img id="cartLogo" class="trolley" src="logo/shopping-cart.png"></a>
       </div>
         <a><img class="logo" src="logo/Asset 16@4x.png"></a> 
         <div class="search-bar-position">
@@ -45,6 +45,9 @@
       </ul>
     </nav>
     <main>
+      <section>
+        <article><h1>Order Menu</h1></article>
+      </section>
        <script src="script.js"></script>
        <section id="section_menu">
       </section>
@@ -55,18 +58,23 @@
           const article = document.createElement('article');
           article.innerHTML = 
           `<div class="bc_menu">
-          <h3>${item.name}</h3>
+          <h3>${item.name} - ${item.calories} kcal</h3>
             <img src="${item.image}" class="menu-image">
             <p class="menu_description">${item.paragraph}</p>
             <button class="menuBtn">Add to cart</button>
             </div>
             `;
             const button = article.querySelector(".menuBtn");
-        button.addEventListener("click", () => {
-          alert(`Added ${item.name} to cart`);
-        })
-        section.appendChild(article);
-        });
+            button.addEventListener("click", () => {
+              let cart = JSON.parse(localStorage.getItem("cart")) || [];
+              cart.push({...item, quantity: 1});
+              localStorage.setItem("cart", JSON.stringify(cart));
+              alert(`Added ${item.name} to cart!`);
+            })
+            section.appendChild(article);
+            });
+
+        let cart = [];
       </script>
     </main>
 
