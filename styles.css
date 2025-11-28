@@ -5,6 +5,7 @@
 }
 body{
   background-color: rgb(235, 235, 155);
+  
 }
 .trolley{
   height: 2rem;
@@ -237,16 +238,17 @@ h3{
 }
 .menuText{
   background-color: white;
-  padding: 1rem 2rem 0rem 2rem;
+  padding: 0.5rem;
   box-shadow: 2px 3px 8px black;
+  width: 480px;
 }
 .menu-image{
   object-fit: cover;
   width: 200px;
 }
 .imgResize{
-  width: 400px;
-  height: 300px;
+  width: 430px;
+  height: 250px;
   object-fit: cover;
 }
 .menuPage{
