@@ -1,6 +1,7 @@
 .logo{
   display: block;
   height: 10rem;
+  align-items: center;
 }
 body{
   background-color: rgb(235, 235, 155);
@@ -272,6 +273,7 @@ h3{
 }
 article{
   border-radius: 1rem;
+  display: flex;
 }
 .lowerNav{
   background-color: beige;

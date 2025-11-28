@@ -46,34 +46,64 @@
 
     <main>
       <section>
-        <article>
-          <h1>Contact Us</h1>
-          <section>
-            <article>
-              <img src="logo/gps.png" alt="">
-              <h3>Little Lemon Address</h3>
-                <p>1234 Lemon Street, Citrus City, FL 12345</p>
-                <p>Phone: (123) 456-7890</p>
-           
-            </article>
-              <article>
-              <h3>Email & Website</h3>
-                <p>Email: contact@littlelemon.com</p>
-                <p>Alternative Email: yang.tortrong@yahoo.com</p>
-            </article>
-          </section>
-        
+          <article>
+            <h1>Little Lemon Contacts</h1>
+            <section>
+              <article style=
+                      "border: solid 0.1rem rgb(182, 182, 137);
+                      padding: 1rem;
+                      margin: 1rem;
+                      gap: 2rem;
+                      background-color:white;
+                      box-shadow: 1px 1px 3px black;">
+                  <h1 style="font-size: 25px;">Location</h1>
+                  <img src="logo/gps.png" style="height: 50px; border: solid 0.1rem rgb(182, 182, 137); padding: 0.5rem; border-radius: 1rem;">
+                  <p style="font-size: 15px">1234 Lemon Street, Citrus City, TY 12345</p>
+                  <p style="font-size: 15px">Phone: (123) 456-7890</p> 
+                </article>  
+                <article style=
+                      "border: solid 0.1rem rgb(182, 182, 137);
+                      padding: 1rem;
+                      margin: 1rem;
+                      gap: 2rem;
+                      background-color:white;
+                      box-shadow: 1px 1px 3px black;">
+                      <h1 style="font-size: 25px;">Mail</h1>
+                    <img src="logo/mail.png" style="height: 50px; border: solid 0.1rem rgb(182, 182, 137); padding: 0.5rem; border-radius: 1rem;">   
+                    <p style="font-size: 15px">Email: contact@littlelemon.com</p>
+                    <p style="font-size: 15px">Alternative Email: yang.tortrong@yahoo.com</p>
+                </article>
+                <article style=
+                      "border: solid 0.1rem rgb(182, 182, 137);
+                      padding: 1rem;
+                      margin: 1rem;
+                      gap: 2rem;
+                      background-color:white;
+                      box-shadow: 1px 1px 3px black;">
+                  <h1 style="font-size: 25px;">Hours</h1>
+                  <img src="logo/clock.png" style="height: 50px; border: solid 0.1rem rgb(182, 182, 137); padding: 0.5rem; border-radius: 1rem;">
+                  <p style="font-size: 15px">Monday - Friday: 9:00 AM - 9:00 PM</p>
+                  <p style="font-size: 15px">Saturday - Sunday: 10:00 AM - 8:00 PM</p>
+                </article>
+            </section>
+          </article>
+        </section>
+
+        <section>
+          <article style="background-color:  rgb(241, 241, 189); border: solid 0.1rem rgb(182, 182, 137); padding: 1rem; margin: 1rem; gap: 2rem; box-shadow: 1px 1px 3px black;">
+            <h1>Send us a message</h1>
+            <form class="contact-form">
+              <label for="name" placehole>First Name:</label> <input placeholder="Maysoo" type="text" id="name" name="name" required><br>
+              <label for="name">Last Name:</label><input placeholder="Yang" type="text" id="name" name="name" required><br>
+              <label for="phone">Phone Number:</label><input placeholder="123-456-789" type="tel" id="phone" name="phone" required><br><br>
+              <label for="email">Email Address:</label> <input type="email" id="email" name="email" required><br><br>
+              <br>
+              <textarea placeholder="Please tell us what you would like us to know" id="message" name="message" rows="4" cols="50" required></textarea><br><br>
+              <input style="cursor: pointer;" type="submit" value="Submit">
+            </form>
         </article>
-        <article>
-          <form class="contact-form">
-            <label for="name">First Name:</label> <input type="text" id="name" name="name" required><br>
-            <label for="name">Last Name:</label><input type="text" id="name" name="name" required><br>
-            <label for="email">Email Address:</label> <input type="email" id="email" name="email" required><br><br>
-            <label for="message">Message:</label><br>
-            <textarea placeholder="Please type anything you would like us to know" id="message" name="message" rows="4" cols="50" required></textarea><br><br>
-            <input type="submit" value="Submit">
-          </form>
-        </article>
+        </section>
+   
       </section>
       
     </main>
