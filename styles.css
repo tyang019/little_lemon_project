@@ -106,6 +106,10 @@ header{
   box-shadow: 0 4px 10px rgba(0,0,0,0.3);
   text-align: center;
 }
+.p{
+  padding: 0.4rem;
+  text-align: center;
+}
 #message p {
   font-size: 18px;
   margin-bottom: 20px;
@@ -116,9 +120,15 @@ header{
   cursor: pointer;
 }
 .banner_class{
-  color:  rgb(73, 94, 87);
+  color: white;
   font-weight: bolder;
   font-size: 3rem;
+  width: auto;
+  margin-bottom: 3rem;
+  background-color: rgb(40, 45, 48);
+  text-align: center;
+  padding: 1rem 2rem 0rem 2rem;
+  
 }
 nav li{
   display: inline-block;
@@ -149,10 +159,13 @@ div img{
 }
 .book_table{
   height: 25rem;
-  width: 77%;
+  width: 85%;
+  object-fit: cover;
 }
 .long{
   height: 25rem;
+  width: auto;
+  object-fit: cover;
 }
 @media(max-width: 768px){
   .logo{
@@ -278,10 +291,12 @@ article{
   display: flex;
 }
 .lowerNav{
-  background-color: beige;
+  background-color: white;
   border: solid 1px rgb(40, 45, 48);
-  padding: 0.7rem;
-  width: 23rem;
+  width: auto;
+  height: 37rem;
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  object-fit: cover;
 }
 article h2{
   cursor: pointer;
