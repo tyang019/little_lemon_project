@@ -20,6 +20,7 @@
   <body>
     <header>
        <div class="trolley">
+          <a href="user.html"><img class="trolley" src="logo/profile-picture (1).png"></a>
          <a href="cart.html"><img class="trolley" src="logo/shopping-cart.png"></a>
       </div>  
         <a><img class="logo" src="logo/Asset 16@4x.png"></a> 
@@ -33,8 +34,12 @@
         <button id="submitBtn">Ok</button>
       </div>
     </div>
-
-
+      <div id="customAlert" class="alert-box">
+        <div class="alert-content">
+          <p id="alertMessage"></p>
+          <button onclick="closeAlert()">OK</button>
+        </div>
+      </div>
     <nav>
        <ul>
         <li><a href="index.html"><button>Home</button></a></li>
@@ -43,7 +48,6 @@
         <li><a href="order.html"><button>Order</button></a></li>
       </ul>
     </nav>
-
     <main>
       <section>
           <article>
@@ -69,9 +73,9 @@
                       background-color:white;
                       box-shadow: 1px 1px 3px black;">
                       <h1 style="font-size: 25px;">Mail</h1>
-                    <img src="logo/mail.png" style="height: 50px; border: solid 0.1rem rgb(182, 182, 137); padding: 0.5rem; border-radius: 1rem;">   
-                    <p style="font-size: 15px">Email: contact@littlelemon.com</p>
-                    <p style="font-size: 15px">Alternative Email: yang.tortrong@yahoo.com</p>
+                    <img src="logo/mail.png" style="height: 50px; border: solid 0.1rem rgb(182, 182, 137); padding: 0.5rem; border-radius: 1rem;">  
+                    <p style="font-size: 15px">Email: yang.tortrong@yahoo.com</p> 
+                    <p style="font-size: 15px">Alternative Email: contact@littlelemon.com</p>
                 </article>
                 <article style=
                       "border: solid 0.1rem rgb(182, 182, 137);
@@ -88,33 +92,33 @@
             </section>
           </article>
         </section>
-
         <section>
           <img style="
             width: auto; 
-            height: 500px;
-            display: block;
-            margin-left: auto;  
+            height: 450px;
+            display: block; 
             box-shadow: 1px 1px 7px rgb(84, 84, 84);
             " src="logo/message-food.jpg" alt="">
-          <article style="background-color:  rgb(241, 241, 189); border: solid 0.1rem rgb(182, 182, 137); padding: 1rem; margin: 1rem; gap: 2rem; box-shadow: 1px 1px 3px black;">
-            <h1>Send us a message</h1>
-            <form class="contact-form">
-              <label for="name" placehole>First Name:</label> <input placeholder="Maysoo" type="text" id="name" name="name" required><br>
-              <label for="name">Last Name:</label><input placeholder="Yang" type="text" id="name" name="name" required><br>
-              <label for="phone">Phone Number:</label><input placeholder="123-456-789" type="tel" id="phone" name="phone" required><br><br>
-              <label for="email">Email Address:</label> <input placeholder="example@example.com" type="email" id="email" name="email" required><br><br>
-              <br>
-              <textarea placeholder="Please share what you would like us to know" id="message" name="message" rows="4" cols="50" required></textarea><br><br>
-              <input style="cursor: pointer;" type="submit" value="Submit">
-            </form>
-        </article>
+            <article style="background-color:  rgb(241, 241, 189); border: solid 0.1rem rgb(182, 182, 137); padding: 1rem; margin: 1rem; gap: 2rem; box-shadow: 1px 1px 3px black;">
+              <h1>Send us a message</h1>
+              <form class="contact-form">
+                <label for="name" placehole>First Name:</label> <input placeholder="Maysoo" type="text" id="name" name="name" required><br>
+                <label for="name">Last Name:</label><input placeholder="Yang" type="text" id="name" name="name" required><br>
+                <label for="phone">Phone Number:</label><input placeholder="123-456-789" type="tel" id="phone" name="phone" maxlength="10" required><br><br>
+                <label for="email">Email Address:</label> <input placeholder="example@example.com" type="email" id="email" name="email" required><br><br>
+                <br>
+                <textarea placeholder="Please share with us what you would like us to know" id="message" name="message" rows="4" cols="50" required></textarea><br><br>
+                <input style="cursor: pointer;margin-top: 15px;
+                  padding: 8px 20px;
+                  background: #007bff;
+                  color: white;
+                  border: none;
+                  border-radius: 6px;" type="submit" value="Submit">
+              </form>
+          </article>
         </section>
-   
       </section>
-      
     </main>
-
      <footer>
        <div>
         <img class="footer_logo" src="logo/Asset 20@4x.png" >

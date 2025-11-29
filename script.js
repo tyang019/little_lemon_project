@@ -3,7 +3,6 @@ const input = document.getElementById('input');
 const searchButton = document.querySelector('.search-button');
 const overlay = document.getElementById('overlay');
 const submitBtn = document.getElementById('submitBtn');
-const cartLogo= document.getElementById('cartLogo');
 
 //2. Add Event Listener
 submitBtn.addEventListener('click', function(){
@@ -17,6 +16,36 @@ searchButton.addEventListener('click', ()=> {
      searchResult.textContent = `You searched for: "${query}"`;
   }
 });
+function showAlert(message) {
+  document.getElementById("alertMessage").innerText = message;
+  document.getElementById("customAlert").style.display = "flex";
+}
+
+function submitPayment() {
+  showAlert("Confirm payment?");
+}
+
+function closeAlert() {
+  document.getElementById("customAlert").style.display = "none";
+
+  // Now submit the form manually
+  document.getElementById("paymentForm").submit();
+}
+document.querySelectorAll(".removeBtn").forEach(btn => {
+  btn.addEventListener("click", function () {
+    const index = this.getAttribute("data-index");
+
+    // Remove item from array
+    cart.splice(index, 1);
+
+    // Save updated cart
+    localStorage.setItem("cart", JSON.stringify(cart));
+
+    // Reload cart page
+    location.reload();
+  });
+});
+
 
 
 //Create Menu using arrays

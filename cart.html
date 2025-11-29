@@ -19,20 +19,27 @@
   
   <body>
     <header>  
+      <div class="trolley">
+         <a href="user.html"><img class="trolley" src="logo/profile-picture (1).png"></a>
+         <a href="cart.html"><img id="cartLogo" class="trolley" src="logo/shopping-cart.png"></a>
+      </div>
         <a><img class="logo" src="logo/Asset 16@4x.png"></a> 
         <div class="search-bar-position">
            <input id="input" class="search_bar" placeholder="Search" type="text"><button class="search-button">Search</button>
         </div> 
     </header>
-
     <div id="overlay" style="display: none;">
       <div id="message">
         <p>Please search for an item.</p>
         <button id="submitBtn">Ok</button>
       </div>
     </div>
-    
-
+    <div id="customAlert" class="alert-box">
+        <div class="alert-content">
+          <p id="alertMessage"></p>
+          <button onclick="closeAlert()">OK</button>
+        </div>
+      </div>
     <nav>
       <ul>
         <li><a href="index.html"><button>Home</button></a></li>
@@ -46,34 +53,54 @@
         const cart = JSON.parse(localStorage.getItem("cart")) || [];
         const main = document.querySelector("main");
         if(cart.length === 0){
-          main.innerHTML += `<h2>Your cart is empty.</h2>`;
+          main.innerHTML += `<section><article><h1>Nothing inside your cart!</h1></article></section><img src="logo/shopping-cart 1.png" alt="Empty Cart" style="display:block; margin:auto; width:200px; height:auto;">`;
         } else {
           main.innerHTML += `<section><article><h1>Your Cart (${cart.length} items)</h1></article></section>`;
         }
-
         const container = document.createElement("div");
         container.classList.add("cart-container");  
-        cart.forEach(item => {
+        cart.forEach((item, index) => {
           const div = document.createElement("div");
           div.classList.add("cart-item");
           div.innerHTML = `
             <img src="${item.image}" class="cart-image">
-            <h3>${item.name}</h3>
-            <p>$${item.price}</p>
-            <button>Remove</button>
+            <section>
+                <article>
+                  <h3>${item.name}</h3>
+                  <p>$${item.price}</p>
+              </article>
+            </section>
+            <button class="removeBtn" data-index="${index}">Remove</button>
           `;
           container.appendChild(div);
         });
-         const totalAmount = cart.reduce((total, item) => total + item.price, 0);
-         const totalDiv = document.createElement("div");
-         totalDiv.classList.add("total-amount");
-         totalDiv.innerHTML = `<section><article><h1>Total Amount: $${totalAmount.toFixed(2)}</h1></article></section>`;
-         container.appendChild(totalDiv);
         main.appendChild(container);
       </script>
+
         <section>
-          <article>   
-            <button id="checkoutBtn" style="font-size: 20px;">Checkout</button>
+          <article>  
+            <h1 style="margin-top: 2rem;">
+              Total: $<span id="totalAmount">
+                <script>
+                  const totalAmount = cart.reduce((total, item) => total + item.price, 0);
+                  document.getElementById("totalAmount").innerText = totalAmount.toFixed(2);
+                </script>
+              </span> 
+            <button id="checkoutBtn" onclick="window.location.href='checkout.html'" style="font-size: 20px; padding: 10px 20px; width:fit-content; pointer-events: auto; cursor: pointer;">
+             Proceed to
+            Checkout
+          </button>
           </article>
         </section>
     </main>
+    <footer>
+       <div>
+        <img class="footer_logo" src="logo/Asset 20@4x.png" >
+      </div>
+      <div>
+        <hr>
+        <p class="copyright">@LittleLemon Copyright</p>
+      </div>
+    </footer>
+  </body>
+</html>

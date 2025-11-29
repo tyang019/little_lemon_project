@@ -20,6 +20,7 @@
   <body>
     <header>  
        <div class="trolley">
+          <a href="user.html"><img class="trolley" src="logo/profile-picture (1).png"></a>
          <a href="cart.html"><img id="cartLogo" class="trolley" src="logo/shopping-cart.png"></a>
       </div>
         <a><img class="logo" src="logo/Asset 16@4x.png"></a> 
@@ -34,8 +35,12 @@
         <button id="submitBtn">Ok</button>
       </div>
     </div>
-    
-
+    <div id="customAlert" class="alert-box">
+        <div class="alert-content">
+          <p id="alertMessage"></p>
+          <button onclick="closeAlert()">OK</button>
+        </div>
+      </div>
     <nav>
       <ul>
         <li><a href="index.html"><button>Home</button></a></li>
@@ -44,6 +49,7 @@
         <li><a href="order.html"><button>Order</button></a></li>
       </ul>
     </nav>
+
     <main>
       <section>
         <article><h1>Order Menu</h1></article>
@@ -51,6 +57,7 @@
        <script src="script.js"></script>
        <section id="section_menu">
       </section>
+
       <script>
         const section = document.getElementById('section_menu');
 
@@ -69,15 +76,12 @@
               let cart = JSON.parse(localStorage.getItem("cart")) || [];
               cart.push({...item, quantity: 1});
               localStorage.setItem("cart", JSON.stringify(cart));
-              alert(`Added ${item.name} to cart!`);
+              showAlert(`Added ${item.name} to cart!`);
             })
             section.appendChild(article);
             });
-
-        let cart = [];
       </script>
     </main>
-
        <footer>
           <div>
             <img class="footer_logo" src="logo/Asset 20@4x.png" >
