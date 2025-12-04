@@ -53,7 +53,7 @@
         const cart = JSON.parse(localStorage.getItem("cart")) || [];
         const main = document.querySelector("main");
         if(cart.length === 0){
-          main.innerHTML += `<section><article><h1>Thank you for your purchase. <p>Your cart is empty!</p></h1></article></section><img src="logo/shopping-cart 1.png" alt="Empty Cart" style="display:block; margin:auto; width:200px; height:auto;">`;
+          main.innerHTML += `<section><article><h1>Thank you for your visit. <p>Your cart is empty!</p></h1></article></section><img src="logo/shopping-cart 1.png" alt="Empty Cart" style="display:block; margin:auto; width:200px; height:auto;">`;
         } else {
           main.innerHTML += `<section><article><h1>Your Cart (${cart.length} items)</h1></article></section>`;
         }
