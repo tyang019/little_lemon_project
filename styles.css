@@ -35,6 +35,12 @@ body{
   background: #fff;
   text-align: center;
 }
+/* hide checkout btn when cart is empty */
+#checkoutBtn.hidden {
+  display: none !important;
+  pointer-events: none;
+  opacity: 0.6;
+}
 
 .cart-image {
   width: 150px;

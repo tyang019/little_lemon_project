@@ -16,7 +16,6 @@
       <link rel="stylesheet" href="styles.css">
       <script src="script.js" defer></script>
   </head>
-  
   <body>
     <header>  
       <div class="trolley">
@@ -48,6 +47,7 @@
         <li><a href="order.html"><button>Order</button></a></li>
       </ul>
     </nav>
+    
     <main>
       <script>
         const cart = JSON.parse(localStorage.getItem("cart")) || [];
@@ -75,8 +75,18 @@
           container.appendChild(div);
         });
         main.appendChild(container);
+        document.addEventListener('DOMContentLoaded', function () {
+          const cart = JSON.parse(localStorage.getItem('cart')) || [];
+          if (cart.length === 0) {
+            const btn = document.getElementById('checkoutBtn');
+            if (btn) btn.classList.add('hidden');
+          } else {
+            // in case you previously hid it somewhere, ensure visible
+            const btn = document.getElementById('checkoutBtn');
+            if (btn) btn.classList.remove('hidden');
+          }
+        });
       </script>
-
         <section>
           <article>  
             <h1 style="margin-top: 2rem;">
@@ -84,9 +94,13 @@
                 <script>
                   const totalAmount = cart.reduce((total, item) => total + item.price, 0);
                   document.getElementById("totalAmount").innerText = totalAmount.toFixed(2);
+                  //do not show checkout button
+                  if(cart.length === 0){
+                    document.getElementById("checkoutBtn").style.display = "none";
+                  }
                 </script>
               </span> 
-            <button id="checkoutBtn" onclick="window.location.href='checkout.html'" style="font-size: 20px; padding: 10px 20px; width:fit-content; pointer-events: auto; cursor: pointer;">
+            <button id="checkoutBtn" onclick="window.location.href='checkout.html' "style="font-size: 20px; padding: 10px 20px; width:fit-content; pointer-events: auto; cursor: pointer;">
              Proceed to
             Checkout
           </button>
