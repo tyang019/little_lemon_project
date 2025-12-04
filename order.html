@@ -60,9 +60,9 @@
           const article = document.createElement('article');
           article.innerHTML = 
           `<div class="bc_menu">
-          <h3>${item.name} - ${item.calories} kcal</h3>
+          <h3>${item.name} - $${item.price.toFixed(2)}</h3>
             <img src="${item.image}" class="menu-image">
-            <h3>$${item.price.toFixed(2)}</h3>
+            <h3>${item.calories} kcal</h3>
             <p class="menu_description">${item.paragraph}</p>
             <button class="menuBtn">Add to cart</button>
             </div>
