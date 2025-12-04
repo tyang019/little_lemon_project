@@ -248,7 +248,6 @@ header > img{
   display: block;
 }
 h1{
-  margin-top: 0px;
   font-size: 3rem;
 }
 h2{
@@ -279,7 +278,6 @@ section {
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-evenly;
-  column-gap: 13px;
   row-gap: 13px;
   margin-bottom: 1rem;
 }
