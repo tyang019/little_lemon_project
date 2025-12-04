@@ -146,8 +146,7 @@ header{
   box-shadow: 0 4px 10px rgba(0,0,0,0.3);
   text-align: center;
 }
-.p{
-  padding: 0.4rem;
+.para{
   text-align: center;
 }
 #message p {
@@ -274,7 +273,8 @@ section {
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-evenly;
-  gap: 1.5rem;  
+  column-gap: 13px;
+  row-gap: 13px;
   margin-bottom: 1rem;
 }
 h3{
@@ -335,8 +335,8 @@ article{
 .lowerNav{
   background-color: white;
   border: solid 1px rgb(40, 45, 48);
-  width: auto;
-  height: 37rem;
+  width: 25rem;
+  height: 35rem;
   font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   object-fit: cover;
 }

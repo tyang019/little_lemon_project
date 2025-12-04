@@ -26,5 +26,5 @@ document.getElementById("paymentForm").addEventListener("submit", function(event
   localStorage.removeItem("cart");
 
   // REDIRECT BACK TO CART
-  //window.location.href = "cart.html";
+  window.location.href = "cart.html";
 });
