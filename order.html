@@ -72,7 +72,7 @@
               let cart = JSON.parse(localStorage.getItem("cart")) || [];
               cart.push({...item, quantity: 1});
               localStorage.setItem("cart", JSON.stringify(cart));
-              showAlert(`Added ${item.name} to cart!`);
+              showAlert(`Added ${item.name} $${item.price.toFixed(2)} to cart!`);
             })
             section.appendChild(article);
             });
