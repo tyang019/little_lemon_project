@@ -47,6 +47,7 @@
           <h1>Menu</h1>
         </article>
      </section>
+     
     <main class="menu_items" id="menu-page">
         <script src="script.js"></script>
         <script>
@@ -55,14 +56,13 @@
           menuItems2.forEach(item => {
             const card = document.createElement("section");
             card.innerHTML = `
-            <section>
               <article class="menuText">
                 <h1 style="
                   font-size: 2rem;
                   margin: 1rem;">${item.category}<hr style="
                   width: auto;
-                  margin-left: 5rem; 
-                  margin-right: 5rem;
+                  margin: 0 auto;
+                  max-width: 90%;
                   height: 2px; 
                   background-color: black; 
                   border: none;
@@ -70,7 +70,6 @@
                 <h3><img class="imgResize" src="${item.img}"</h3>
                 <div style="
                     padding: 0.2rem;
-                    margin: 1rem;
                     gap: 2rem;
                     box-shadow: 1px 1px 3px gray;">
                   <p style="font-size: 1.3rem;">${item.name} - $${item.price}</p>
@@ -78,7 +77,6 @@
                   <p style="font-size: 1.3rem;">${item.name2} - $${item.price2}</p>
                 </div>
               </article>
-            </section>
             `;
             menuContainer.appendChild(card);
           });
